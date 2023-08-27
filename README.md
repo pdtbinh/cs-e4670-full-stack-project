@@ -1,3 +1,6 @@
+Link to hour keeping file (frontend and backend combined):
+https://github.com/pdtbinh/cs-e4670-full-stack-project/blob/backend/hourkeeping.md 
+
 This is the backend part of <b>Project Partner App</b>.
 
 |Entity|Method|Route|Purpose|
