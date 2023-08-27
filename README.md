@@ -1,4 +1,10 @@
-# Hour keeping:
+# Project intro
+
+Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? 
+
+This full stack web application aims to provide a platform for you to share your project ideas and find the most suitable partners.
+
+# Hour keeping
 
 Link to hour keeping file (frontend and backend combined):
 
@@ -6,7 +12,7 @@ https://github.com/pdtbinh/cs-e4670-full-stack-project/blob/backend/hourkeeping.
 
 Or you can manually find the `hourkeeping.md` file in the `backend` branch.
 
-# Backend routes:
+# Backend routes
 
 This is the backend part of <b>Project Partner App</b>.
 
