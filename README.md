@@ -1,5 +1,8 @@
 Link to hour keeping file (frontend and backend combined):
-https://github.com/pdtbinh/cs-e4670-full-stack-project/blob/backend/hourkeeping.md 
+
+https://github.com/pdtbinh/cs-e4670-full-stack-project/blob/backend/hourkeeping.md
+
+Or you can manually find the `hourkeeping.md` file in the `backend` branch.
 
 This is the backend part of <b>Project Partner App</b>.
 
