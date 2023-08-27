@@ -1,6 +1,12 @@
+/*=================
+IMPORT DEPENDENCIES
+==================*/
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 
+/*==================
+DEFINE "USER" SCHEMA
+===================*/
 const userSchema = mongoose.Schema({
     username: {
         type: String,
@@ -8,21 +14,28 @@ const userSchema = mongoose.Schema({
         unique: true,
         minLength: 3
     },
-    name: String,
     passwordHashed: {
         type: String,
         required: true,
         unique: true,
         minLength: 3
     },
-    blogs: [
+    name: {
+        type: String,
+        required: true,
+        minLength: 3
+    },
+    projects: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Blog'
+            ref: 'Project'
         }
     ]
 })
 
+/*=============
+SCHEMA SETTINGS
+==============*/
 userSchema.plugin(uniqueValidator)
 
 userSchema.set('toJSON', {
@@ -34,6 +47,7 @@ userSchema.set('toJSON', {
     }
 })
 
-const User = mongoose.model('User', userSchema)
-
-module.exports = User
+/*===========
+EXPORT SCHEMA
+============*/
+module.exports = mongoose.model('User', userSchema)
