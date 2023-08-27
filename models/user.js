@@ -22,7 +22,6 @@ const userSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
-        minLength: 3
     },
     projects: [
         {
