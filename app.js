@@ -19,9 +19,9 @@ CONNECT TO MONGO DB
 const url = env.MONGODB_URI
 mongoose.set('strictQuery',false)
 mongoose
-  .connect(url)
-  .then(() => logger.info('Connected to MongoDB'))
-  .catch(error => logger.error('Failed to connect to MongoDB: ', error.message))
+    .connect(url)
+    .then(() => logger.info('Connected to MongoDB'))
+    .catch(error => logger.error('Failed to connect to MongoDB: ', error.message))
 
 /*====================
 BACKEND CONFIGURATIONS
@@ -42,8 +42,8 @@ app.use('/', (req, res) => res.send('Hello'))
 //app.use('/api/users', usersRouter)
 //app.use('/api/login', loginRouter)
 if (process.env.NODE_ENV === 'test') {
-  //const testingRouter = require('./controllers/testing')
-  //app.use('/api/testing', testingRouter)
+    //const testingRouter = require('./controllers/testing')
+    //app.use('/api/testing', testingRouter)
 }
 
 /*=====================
