@@ -6,12 +6,12 @@ const mongoose = require('mongoose')
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const authRouter = require('./controllers/auth')
 //const blogsRouter = require('./controllers/blogs')
 const usersRouter = require('./controllers/user')
 const env = require('./utils/config')
 const logger = require('./utils/logger')
-//const middleware = require('./utils/middleware')
-//const loginRouter = require('./controllers/login')
+const middleware = require('./utils/middleware')
 
 /*=================
 CONNECT TO MONGO DB
@@ -32,7 +32,7 @@ app.use(express.json())
 /*====================
 PRE-ROUTING MIDDLEWARE
 =====================*/
-//app.use(middleware.tokenExtractor)
+app.use(middleware.extractToken)
 
 /*============
 ALL API ROUTES
@@ -40,7 +40,7 @@ ALL API ROUTES
 
 //app.use('/api/blogs', middleware.userExtractor, blogsRouter)
 app.use('/api/users', usersRouter)
-//app.use('/api/login', loginRouter)
+app.use('/api/auth', authRouter)
 if (process.env.NODE_ENV === 'test') {
     //const testingRouter = require('./controllers/testing')
     //app.use('/api/testing', testingRouter)
@@ -50,7 +50,7 @@ app.use('*', (req, res) => res.send('Hello'))
 /*=====================
 POST-ROUTING MIDDLEWARE
 ======================*/
-//app.use(middleware.errorHandler)
+app.use(middleware.errorHandler)
 
 /*=====
 EXPORTS
