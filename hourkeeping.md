@@ -8,5 +8,6 @@ Hour keep of the project (for both backend & frontend):
 |27-08-2023|5|Add user & project models|Backend|
 |27-08-2023|5|Initialize user controllers & routes|Backend|
 |28-08-2023|5|Login functionality & other helper middleware|Backend|
+|28-08-2023|5|Add project controllers|Backend|
 
-Total hour spent: 30
+Total hour spent: 35
