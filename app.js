@@ -7,7 +7,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const authRouter = require('./controllers/auth')
-//const blogsRouter = require('./controllers/blogs')
+const projectsRouter = require('./controllers/project')
 const usersRouter = require('./controllers/user')
 const env = require('./utils/config')
 const logger = require('./utils/logger')
@@ -37,8 +37,7 @@ app.use(middleware.extractToken)
 /*============
 ALL API ROUTES
 =============*/
-
-//app.use('/api/blogs', middleware.userExtractor, blogsRouter)
+app.use('/api/projects', middleware.extractUser, projectsRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/auth', authRouter)
 if (process.env.NODE_ENV === 'test') {

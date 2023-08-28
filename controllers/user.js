@@ -11,7 +11,7 @@ ROUTE INNER FUNCTIONS
 const getAllUsers = async (request, response) => {
     const users = await User
         .find({})
-        //.populate('projects', { title: 1, description: 1 })
+        .populate('projects', { title: 1, description: 1 })
     response.status(200).json(users)
 }
 

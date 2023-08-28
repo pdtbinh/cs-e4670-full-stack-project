@@ -29,7 +29,7 @@ const login =  async (request, response) => {
     const token = jwt.sign(
         userForToken, 
         process.env.SECRET,
-        { expiresIn: '30d' } //Token expires after 1 month
+        { expiresIn: '30d' } //Token expires after 30 days
     )
 
     response.status(200).send({ token, username: user.username, name: user.name })
