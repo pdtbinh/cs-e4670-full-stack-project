@@ -12,7 +12,9 @@ ROUTE INNER FUNCTIONS
 ====================*/
 const login =  async (request, response) => {
     const { username, password } = request.body
-    const user = await User.findOne({ username })
+    const user = await User
+        .findOne({ username })
+        .populate('projects', { title: 1, description: 1 })
     const passwordCorrect = user && await bcrypt.compare(password, user.passwordHashed)
 
     if (!passwordCorrect) {
@@ -32,7 +34,9 @@ const login =  async (request, response) => {
         { expiresIn: '30d' } //Token expires after 30 days
     )
 
-    response.status(200).send({ token, username: user.username, name: user.name })
+    response.status(200).send(
+        { token, username: user.username, name: user.name, projects: user.projects }
+    )
 }
 
 /*===========
