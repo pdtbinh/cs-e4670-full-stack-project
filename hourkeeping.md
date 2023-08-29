@@ -14,5 +14,6 @@ Hour keep of the project (for both backend & frontend):
 |29-08-2023|5|Implement frontend services|Frontend|
 |29-08-2023|5|Implement frontend routes|Frontend|
 |30-08-2023|5|Login form|Frontend|
+|30-08-2023|5|Add user state when logged in|Frontend|
 
-Total hour spent: <b>55</b>
+Total hour spent: <b>60</b>
