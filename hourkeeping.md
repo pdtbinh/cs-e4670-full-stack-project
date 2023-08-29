@@ -13,4 +13,4 @@ Hour keep of the project (for both backend & frontend):
 |29-08-2023|3|Install & get used to react-router-dom|Frontend|
 |29-08-2023|5|Implement frontend routes|Frontend|
 
-Total hour spent: 45
+Total hour spent: <b>45</b>
