@@ -1,5 +1,6 @@
 import axios from 'axios'
-const baseUrl = '/api/projects'
+import { backendUrl } from '../keys/keywords'
+const baseUrl = `${backendUrl}/api/projects`
 
 let token = null
 export const setToken = newToken => token = `Bearer ${newToken}`

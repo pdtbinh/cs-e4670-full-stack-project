@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { login } from '../../services/login'
+import { localStorageKey } from '../../keys/keywords'
+import { Navigate } from 'react-router-dom'
 
-const LoginForm = () => {
+const LoginForm = ({ user, setUser }) => {
+    if (user) return <Navigate to='/'/>
+
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -9,7 +13,8 @@ const LoginForm = () => {
         event.preventDefault()
         try {
             const user = await login({ username, password })
-            window.localStorage.setItem('fso-project-user', JSON.stringify(user))
+            window.localStorage.setItem(localStorageKey, JSON.stringify(user))
+            setUser(user)
         } catch (exception) {
             // show error message
         }
