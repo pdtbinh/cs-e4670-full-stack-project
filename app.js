@@ -2,6 +2,7 @@
 IMPORT DEPENDENCIES
 ==================*/
 require('dotenv').config()
+const morgan = require('morgan')
 const mongoose = require('mongoose')
 const express = require('express')
 const app = express()
@@ -28,6 +29,8 @@ BACKEND CONFIGURATIONS
 =====================*/
 app.use(cors())
 app.use(express.json())
+morgan.token('body', (req) => JSON.stringify(req.body))
+app.use(morgan(':method :url :status :req[content-length] - :response-time ms :body'))
 
 /*====================
 PRE-ROUTING MIDDLEWARE
@@ -44,7 +47,7 @@ if (process.env.NODE_ENV === 'test') {
     //const testingRouter = require('./controllers/testing')
     //app.use('/api/testing', testingRouter)
 }
-app.use('*', (req, res) => res.send('Hello'))
+app.use('*', (req, res) => res.send('404: Backend route not found.'))
 
 /*=====================
 POST-ROUTING MIDDLEWARE
