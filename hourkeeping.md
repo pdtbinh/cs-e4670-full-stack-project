@@ -14,4 +14,4 @@ Hour keep of the project (for both backend & frontend):
 |29-08-2023|5|Implement frontend services|Frontend|
 |29-08-2023|5|Implement frontend routes|Frontend|
 
-Total hour spent: <b>45</b>
+Total hour spent: <b>50</b>
