@@ -9,6 +9,8 @@ Hour keep of the project (for both backend & frontend):
 |27-08-2023|5|Initialize user controllers & routes|Backend|
 |28-08-2023|5|Login functionality & other helper middleware|Backend|
 |28-08-2023|5|Add project controllers|Backend|
-|29-08-2023|2|Setup frontend, clear default files|
+|29-08-2023|2|Setup frontend, clear default files|Frontend|
+|29-08-2023|3|Install & get used to react-router-dom|Frontend|
+|29-08-2023|5|Implement frontend routes|Frontend|
 
-Total hour spent: 37
+Total hour spent: 45
