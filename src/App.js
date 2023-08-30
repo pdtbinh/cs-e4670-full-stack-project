@@ -4,6 +4,7 @@ import LoginForm from './components/authentication/LoginForm'
 import { useState, useEffect } from 'react'
 import { localStorageKey } from './keys/keywords'
 import Projects from './components/project/Projects'
+import { setToken } from './services/project'
 
 const App = () => {
     const [user, setUser] = useState(null)
@@ -12,6 +13,7 @@ const App = () => {
         const loggedUserStr = window.localStorage.getItem(localStorageKey)
         if (loggedUserStr) {
             const userJSON = JSON.parse(loggedUserStr)
+            setToken(userJSON.token)
             setUser(userJSON)
         }
     }, [])

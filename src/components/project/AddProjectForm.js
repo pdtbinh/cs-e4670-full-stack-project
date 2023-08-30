@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { create } from '../../services/project'
 
-const AddProjectForm = ({ user, setUser }) => {
+const AddProjectForm = ({ user, projects, setProjects }) => {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -13,9 +13,12 @@ const AddProjectForm = ({ user, setUser }) => {
         try {
             const project = { title, description }
             const createdProject = await create(project)
-            setUser({ ...user, projects: [...user.projects, createdProject] })
+            setProjects([...projects, createdProject])
+            setTitle('')
+            setDescription('')
+            setShowForm(false)
         } catch (exception) {
-            // do something
+            console.log(exception)
         }
     }
 

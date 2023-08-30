@@ -30,7 +30,11 @@ const Projects = ({ user }) => {
                     description={project.description}
                 />
             )}
-            <AddProjectForm user={user}/>
+            <AddProjectForm
+                user={user}
+                projects={projects}
+                setProjects={setProjects}
+            />
         </>
     )
 }
