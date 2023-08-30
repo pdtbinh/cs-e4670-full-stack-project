@@ -23,7 +23,10 @@ const addNewProject = async (request, response) => {
     const user = request.user
     const { title, description } = request.body
     const project = new Project({ title, description, user: user._id })
-    const savedProject = await project.save()
+    let savedProject = await project.save()
+    savedProject = await Project
+        .findById(savedProject._id)
+        .populate('user', { username: 1, name: 1 })
 
     // Add project to user.projects
     user.projects = user.projects.concat(savedProject._id)
