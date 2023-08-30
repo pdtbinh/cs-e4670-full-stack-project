@@ -24,4 +24,4 @@ Hour keep of the project (for both backend & frontend):
 |30-08-2023|5|Fix delete option not showing bug|Frontend|
 
 
-Total hour spent: <b>90</b>
+Total hour spent: <b>95</b>
