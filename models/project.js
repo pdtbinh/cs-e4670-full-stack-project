@@ -14,7 +14,6 @@ const projectSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
-        minLength: 10
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,

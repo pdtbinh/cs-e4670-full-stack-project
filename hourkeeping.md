@@ -18,6 +18,7 @@ Hour keep of the project (for both backend & frontend):
 |29-08-2023|5|Fetch all projects from backend|Frontend|
 |29-08-2023|5|Handle add project|Frontend & Backend|
 |30-08-2023|5|Add project button & Project card showing project detail|Frontend|
+|30-08-2023|5|Frontend show added project immediately after adding|Frontend|
 
 
 Total hour spent: <b>75</b>

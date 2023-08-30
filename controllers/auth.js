@@ -12,9 +12,7 @@ ROUTE INNER FUNCTIONS
 ====================*/
 const login =  async (request, response) => {
     const { username, password } = request.body
-    const user = await User
-        .findOne({ username })
-        .populate('projects', { title: 1, description: 1 })
+    const user = await User.findOne({ username })
     const passwordCorrect = user && await bcrypt.compare(password, user.passwordHashed)
 
     if (!passwordCorrect) {
@@ -35,7 +33,7 @@ const login =  async (request, response) => {
     )
 
     response.status(200).send(
-        { token, username: user.username, name: user.name, projects: user.projects }
+        { token, username: user.username, name: user.name }
     )
 }
 
