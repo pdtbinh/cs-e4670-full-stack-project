@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { getAll } from '../../services/project'
+import AddProjectForm from './AddProjectForm'
 
-const Projects = () => {
+const Projects = ({ user }) => {
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
@@ -22,6 +23,7 @@ const Projects = () => {
         <>
             <p>All projects:</p>
             {projects.map(project => <p key={project.id}>{project.title}</p>)}
+            <AddProjectForm user={user}/>
         </>
     )
 }
