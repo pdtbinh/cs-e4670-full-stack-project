@@ -1,11 +1,23 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
+import { create } from '../../services/project'
 
-const AddProjectForm = ({ user }) => {
+const AddProjectForm = ({ user, setUser }) => {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [showForm, setShowForm] = useState(false)
+
+    const handleAddProject = async (event) => {
+        event.preventDefault()
+        try {
+            const project = { title, description }
+            const createdProject = await create(project)
+            setUser({ ...user, projects: [...user.projects, createdProject] })
+        } catch (exception) {
+            // do something
+        }
+    }
 
     if (!showForm)
         return (
@@ -18,7 +30,7 @@ const AddProjectForm = ({ user }) => {
 
     return (
         <>
-            <form>
+            <form onSubmit={handleAddProject}>
                 <div>
                     title
                     <input
@@ -31,9 +43,9 @@ const AddProjectForm = ({ user }) => {
                 <div>
                     description
                     <input
-                        type="password"
+                        type="text"
                         value={description}
-                        name="password"
+                        name="description"
                         onChange={({ target }) => setDescription(target.value)}
                     />
                 </div>
