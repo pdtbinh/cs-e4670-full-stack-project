@@ -26,8 +26,10 @@ const Projects = ({ user }) => {
             {projects.map(
                 project => <ProjectCard
                     key={project.id}
-                    title={project.title}
-                    description={project.description}
+                    user={user}
+                    project={project}
+                    projects={projects}
+                    setProjects={setProjects}
                 />
             )}
             <AddProjectForm
