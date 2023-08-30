@@ -5,9 +5,9 @@ const baseUrl = `${backendUrl}/api/projects`
 let token = null
 export const setToken = newToken => token = `Bearer ${newToken}`
 
-export const getAll = () => {
-    const request = axios.get(baseUrl)
-    return request.then(response => response.data)
+export const getAll = async () => {
+    const response = await axios.get(baseUrl)
+    return response.data
 }
 
 export const create = async project => {
