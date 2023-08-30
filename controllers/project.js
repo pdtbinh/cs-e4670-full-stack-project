@@ -25,8 +25,8 @@ const addNewProject = async (request, response) => {
     const project = new Project({ title, description, user: user._id })
     const savedProject = await project.save()
 
-    // Add blog to user.blogs
-    user.projects = user.blogs.concat(savedProject._id)
+    // Add project to user.projects
+    user.projects = user.projects.concat(savedProject._id)
     user.save()
 
     // Respond
