@@ -9,16 +9,18 @@ Hour keep of the project (for both backend & frontend):
 |25-08-2023|5|Initialize user controllers & routes|Backend|
 |26-08-2023|5|Login functionality & other helper middleware|Backend|
 |26-08-2023|5|Add project controllers|Backend|
-|27-08-2023|2|Setup frontend, clear default files|Frontend|
+|26-08-2023|2|Setup frontend, clear default files|Frontend|
 |27-08-2023|3|Install & get used to react-router-dom|Frontend|
 |27-08-2023|5|Implement frontend services|Frontend|
-|28-08-2023|5|Implement frontend routes|Frontend|
+|27-08-2023|5|Implement frontend routes|Frontend|
 |28-08-2023|5|Login form|Frontend|
-|29-08-2023|5|Add user state when logged in|Frontend|
-|29-08-2023|5|Fetch all projects from backend|Frontend|
+|28-08-2023|5|Add user state when logged in|Frontend|
+|28-08-2023|5|Fetch all projects from backend|Frontend|
 |29-08-2023|5|Handle add project|Frontend & Backend|
-|30-08-2023|5|Add project button & Project card showing project detail|Frontend|
-|30-08-2023|5|Frontend show added project immediately after adding|Frontend|
+|29-08-2023|5|Add project button & Project card showing project detail|Frontend|
+|29-08-2023|5|Frontend show added project immediately after adding|Frontend|
+|30-08-2023|5|Frontend layout for showing logged in user|Frontend|
+|30-08-2023|5|Delete a single project|Frontend|
 
 
-Total hour spent: <b>75</b>
+Total hour spent: <b>90</b>
