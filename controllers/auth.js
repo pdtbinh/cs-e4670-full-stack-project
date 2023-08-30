@@ -44,10 +44,6 @@ authRouter
     .route('/login')
     .post(login)
 
-authRouter
-    .route('/logout')
-    .delete()
-
 /*===========
 EXPORT ROUTER
 ============*/

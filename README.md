@@ -27,4 +27,3 @@ This is the backend part of <b>Project Partner App</b>.
 ||PUT|`/api/projects/:project_id`|Update a specified project|
 ||DELETE|`/api/projects/:project_id`|Delete a specified project|
 |Authentication|POST|`/api/auth/login`|Login user|
-||DELETE|`/api/auth/logout`|Logout user|
