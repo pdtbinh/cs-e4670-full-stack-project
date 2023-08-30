@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { localStorageKey } from './keys/keywords'
 import Projects from './components/project/Projects'
 import { setToken } from './services/project'
+import Layout from './components/layout/Layout'
 
 const App = () => {
     const [user, setUser] = useState(null)
@@ -21,7 +22,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<>Layout<Outlet/></>}>
+                <Route path="/" element={<Layout user={user}><Outlet/></Layout>}>
                     <Route index element={<Projects user={user}/>} />
                     <Route path="login" element={<LoginForm user={user} setUser={setUser}/>}/>
                     <Route path="*" element={<p>404: Error</p>} />
