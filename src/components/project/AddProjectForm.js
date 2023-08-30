@@ -18,15 +18,17 @@ const AddProjectForm = ({ user, projects, setProjects }) => {
             setDescription('')
             setShowForm(false)
         } catch (exception) {
-            console.log(exception)
+            // something
         }
     }
 
     if (!showForm)
         return (
-            <button onClick={() => setShowForm(true)}>
-                Add project
-            </button>
+            <div>
+                <button onClick={() => setShowForm(true)}>
+                    Add project
+                </button>
+            </div>
         )
     else if (!user)
         return <Navigate to='/login'/>

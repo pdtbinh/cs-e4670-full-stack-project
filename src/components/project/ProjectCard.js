@@ -12,7 +12,10 @@ const ProjectCard = ({ user, project, projects, setProjects }) => {
         <>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
-            {user ? <button onClick={handleRemoveProject}>Delete</button> : null}
+            {(user && user.username === project.user.username) ?
+                <button onClick={handleRemoveProject}>Delete</button>
+                : null
+            }
         </>
     )
 }
