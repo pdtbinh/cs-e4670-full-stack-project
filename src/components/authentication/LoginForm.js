@@ -3,6 +3,7 @@ import { login } from '../../services/login'
 import { localStorageKey } from '../../keys/keywords'
 import { NavLink, Navigate } from 'react-router-dom'
 import { setToken } from '../../services/project'
+import './Auth.css'
 
 const LoginForm = ({ user, setUser }) => {
     if (user) return <Navigate to='/'/>
@@ -23,28 +24,35 @@ const LoginForm = ({ user, setUser }) => {
     }
 
     return (
-        <form onSubmit={handleLogin}>
-            <div>
-                username
-                <input
-                    type="text"
-                    value={username}
-                    name="username"
-                    onChange={({ target }) => setUsername(target.value)}
-                />
-            </div>
-            <div>
-                password
-                <input
-                    type="password"
-                    value={password}
-                    name="password"
-                    onChange={({ target }) => setPassword(target.value)}
-                />
-            </div>
-            <button type="submit">Login</button>
-            <NavLink to='/register'>Don&apos;t have an account yet?</NavLink>
-        </form>
+        <div className='LoginDiv'>
+            <form onSubmit={handleLogin} className='LoginForm'>
+                <h1>
+                    Welcome back!
+                </h1>
+                <div>
+                    <p>Username</p>
+                    <input
+                        type="text"
+                        value={username}
+                        name="username"
+                        required
+                        onChange={({ target }) => setUsername(target.value)}
+                    />
+                </div>
+                <div>
+                    <p>Password</p>
+                    <input
+                        type="password"
+                        value={password}
+                        name="password"
+                        required
+                        onChange={({ target }) => setPassword(target.value)}
+                    />
+                </div>
+                <button type="submit"><p>Login</p></button>
+                <NavLink to='/register'>Don&apos;t have an account yet?</NavLink>
+            </form>
+        </div>
     )
 }
 

@@ -4,12 +4,13 @@
     justify-content: top;
     align-items: center;
     height: 100vh;
+    background-color: var(--text-bg-color);
 }
 
 .LayoutPanel {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     color: rgb(0, 0, 0);
-    background-color: #94f2b7;
+    background-color: var(--cpn-bg-color);
     position: sticky;
     top: 0;
     width: 100vw;
