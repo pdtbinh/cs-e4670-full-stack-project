@@ -3,6 +3,7 @@ import { setToken } from '../../services/project'
 import { localStorageKey } from '../../keys/keywords'
 import LoginIcon from '@mui/icons-material/Login'
 import GroupWorkIcon from '@mui/icons-material/GroupWork'
+import Tooltip from '@mui/material/Tooltip'
 import './Layout.css'
 
 const Layout = ({ user, setUser, children }) => {
@@ -16,17 +17,21 @@ const Layout = ({ user, setUser, children }) => {
     return (
         <div className='Layout'>
             <div className='LayoutPanel'>
-                <h4>
+                <h3>
                     <GroupWorkIcon fontSize='large' style={{ 'margin-right': '5px' }}/>
                     CollabConnect
-                </h4>
+                </h3>
                 {user ?
                     <>
                         <p>{`User: ${user.name}`}</p>
                         <button onClick={handleLogout}>Logout</button>
                     </>
                     : <NavLink to='/login'>
-                        <button><LoginIcon fontSize='large'/></button>
+                        <Tooltip title='Login'>
+                            <button>
+                                <LoginIcon fontSize='large'/>
+                            </button>
+                        </Tooltip>
                     </NavLink>
                 }
             </div>

@@ -20,7 +20,7 @@
     margin-bottom: 10px;
 }
 
-.LayoutPanel h4 {
+.LayoutPanel h3 {
     margin: 0;
     text-align: center;
     display: flex;
@@ -28,10 +28,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 10vw;
 }
 
 .LayoutPanel button {
     background-color: transparent;
     border: none;
+    margin-right: 10vw; 
+}
+
+.LayoutPanel button:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    transition: 0.15s;
 }
