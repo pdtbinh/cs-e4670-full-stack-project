@@ -26,6 +26,7 @@ Hour keep of the project (for both backend & frontend):
 |31-08-2023|5|Handle edit project|Frontend|
 |31-08-2023|5|Fix edit project bug|Frontend|
 |01-09-2023|5|Register new user interface|Frontend|
+|01-09-2023|5|Style layout navbar|Frontend|
 
 
-Total hour spent: <b>115</b>
+Total hour spent: <b>120</b>
