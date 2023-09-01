@@ -23,6 +23,8 @@ Hour keep of the project (for both backend & frontend):
 |30-08-2023|5|Delete a single project|Frontend|
 |30-08-2023|5|Fix delete option not showing bug|Frontend|
 |31-08-2023|5|Logout user|Frontend|
+|31-08-2023|5|Handle edit project|Frontend|
+|31-08-2023|5|Fix edit project bug|Frontend|
 
 
-Total hour spent: <b>100</b>
+Total hour spent: <b>110</b>
