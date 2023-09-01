@@ -1,29 +1,32 @@
 import { useState } from 'react'
-import { login } from '../../services/login'
-import { localStorageKey } from '../../keys/keywords'
-import { Navigate } from 'react-router-dom'
-import { setToken } from '../../services/project'
+import { create } from '../../services/user'
 
-const LoginForm = ({ user, setUser }) => {
-    if (user) return <Navigate to='/'/>
-
+const RegisterForm = () => {
+    const [name, setName] = useState('')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleLogin = async (event) => {
+    const handleRegister = async (event) => {
         event.preventDefault()
         try {
-            const user = await login({ username, password })
-            window.localStorage.setItem(localStorageKey, JSON.stringify(user))
-            setToken(user.token)
-            setUser(user)
+            await create({ name, username, password })
+            // call login
         } catch (exception) {
-            // show error message
+            // do sth
         }
     }
 
     return (
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleRegister}>
+            <div>
+                name
+                <input
+                    type="text"
+                    value={name}
+                    name="name"
+                    onChange={({ target }) => setName(target.value)}
+                />
+            </div>
             <div>
                 username
                 <input
@@ -42,9 +45,9 @@ const LoginForm = ({ user, setUser }) => {
                     onChange={({ target }) => setPassword(target.value)}
                 />
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">Sign-up</button>
         </form>
     )
 }
 
-export default LoginForm
+export default RegisterForm
