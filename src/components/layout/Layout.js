@@ -1,7 +1,26 @@
-const Layout = ({ user, children }) => {
+import { NavLink } from 'react-router-dom'
+import { setToken } from '../../services/project'
+import { localStorageKey } from '../../keys/keywords'
+
+const Layout = ({ user, setUser, children }) => {
+
+    const handleLogout = () => {
+        window.localStorage.removeItem(localStorageKey)
+        setUser(null)
+        setToken(null)
+    }
+
     return (
         <div>
-            {user ? `User: ${user.name}` : 'Please log in'}
+            {user ?
+                <>
+                    <p>{`User: ${user.name}`}</p>
+                    <button onClick={handleLogout}>Logout</button>
+                </>
+                : <NavLink to='/login'>
+                    <button>Login</button>
+                </NavLink>
+            }
             {children}
         </div>
     )
