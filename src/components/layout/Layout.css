@@ -1,0 +1,37 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    height: 100vh;
+}
+
+.LayoutPanel {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: rgb(0, 0, 0);
+    background-color: #94f2b7;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.LayoutPanel h4 {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    font-style: bold;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.LayoutPanel button {
+    background-color: transparent;
+    border: none;
+}
