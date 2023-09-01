@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { login } from '../../services/login'
 import { localStorageKey } from '../../keys/keywords'
-import { Navigate } from 'react-router-dom'
+import { NavLink, Navigate } from 'react-router-dom'
 import { setToken } from '../../services/project'
 
 const LoginForm = ({ user, setUser }) => {
@@ -43,6 +43,7 @@ const LoginForm = ({ user, setUser }) => {
                 />
             </div>
             <button type="submit">Login</button>
+            <NavLink to='/register'>Don&apos;t have an account yet?</NavLink>
         </form>
     )
 }

@@ -6,6 +6,7 @@ import { localStorageKey } from './keys/keywords'
 import Projects from './components/project/Projects'
 import { setToken } from './services/project'
 import Layout from './components/layout/Layout'
+import RegisterForm from './components/authentication/RegisterForm'
 
 const App = () => {
     const [user, setUser] = useState(null)
@@ -29,6 +30,7 @@ const App = () => {
                 }>
                     <Route index element={<Projects user={user}/>} />
                     <Route path="login" element={<LoginForm user={user} setUser={setUser}/>}/>
+                    <Route path="register" element={<RegisterForm user={user} setUser={setUser}/>}/>
                     <Route path="*" element={<p>404: Error</p>} />
                 </Route>
             </Routes>
