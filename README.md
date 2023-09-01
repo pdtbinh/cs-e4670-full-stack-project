@@ -1,8 +1,8 @@
-# Project intro
+# Project intro: Collab-Connect
 
 Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? 
 
-This full stack web application aims to provide a platform for you to share your project ideas and find the most suitable partners.
+This full stack web application aims to provide a platform for you to share your project ideas and find the most suitable partners. In short, it helps connect collaborators.
 
 # Hour keeping
 
