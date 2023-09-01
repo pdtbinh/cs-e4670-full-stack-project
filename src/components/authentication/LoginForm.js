@@ -30,9 +30,9 @@ const LoginForm = ({ user, setUser }) => {
                     Welcome back!
                 </h1>
                 <div>
-                    <p>Username</p>
+                    <p>Email</p>
                     <input
-                        type="text"
+                        type="email"
                         value={username}
                         name="username"
                         required
