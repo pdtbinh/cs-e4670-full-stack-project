@@ -5,6 +5,7 @@ import LoginIcon from '@mui/icons-material/Login'
 import GroupWorkIcon from '@mui/icons-material/GroupWork'
 import Tooltip from '@mui/material/Tooltip'
 import './Layout.css'
+import LogoutIcon from '@mui/icons-material/Logout'
 
 const Layout = ({ user, setUser, children }) => {
 
@@ -22,10 +23,16 @@ const Layout = ({ user, setUser, children }) => {
                     CollabConnect
                 </h3>
                 {user ?
-                    <>
-                        <p>{`User: ${user.name}`}</p>
-                        <button onClick={handleLogout}>Logout</button>
-                    </>
+                    <div className='UserInfoBox'>
+                        <Tooltip title={`E-mail: ${user.username}`}>
+                            <p><b>{user.name}</b></p>
+                        </Tooltip>
+                        <Tooltip title='Logout'>
+                            <button onClick={handleLogout}>
+                                <LogoutIcon fontSize='large'/>
+                            </button>
+                        </Tooltip>
+                    </div>
                     : <NavLink to='/login'>
                         <Tooltip title='Login'>
                             <button>

@@ -22,7 +22,7 @@
     margin-bottom: 10px;
 }
 
-.LayoutPanel h3 {
+.LayoutPanel h3, .LayoutPanel p {
     color: var(--login-bg-color);
     margin: 0;
     text-align: center;
@@ -31,7 +31,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 10vw;
+    margin-left: 8vw;
     box-shadow: var(--text-shadow);
     background-color: var(--text-bg-color);
     padding: 8px 15px;
@@ -41,7 +41,7 @@
 .LayoutPanel button {
     background-color: transparent;
     border: none;
-    margin-right: 10vw; 
+    margin-right: 8vw; 
     color: var(--login-bg-color);
     box-shadow: var(--cpn-shadow);
     background-color: var(--text-bg-color);
@@ -53,4 +53,13 @@
     cursor: pointer;
     transform: scale(1.25);
     transition: 0.15s;
+}
+
+.UserInfoBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.UserInfoBox p {
+    margin-right: 20px;
 }
