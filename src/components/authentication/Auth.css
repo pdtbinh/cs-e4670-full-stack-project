@@ -7,7 +7,7 @@
 }
 
 .LoginForm {
-    height: 60vh;
+    height: fit-content;
     width: fit-content;
     padding: 30px;
     display: flex;
@@ -24,8 +24,8 @@
     border-radius: 20px;
     border: none;
     padding: 10px;
-    margin: 10px 0;
-    margin-bottom: 40px;
+    margin: 5px 0;
+    margin-bottom: 25px;
     width: 250px;
     background-color: var(--text-bg-color);
 }
@@ -65,7 +65,7 @@
 .LoginForm button p {
     margin: 0;
     font-weight: 500;
-    color: white;
+    color: var(--text-bg-color);
 }
 
 .LoginForm h1 {

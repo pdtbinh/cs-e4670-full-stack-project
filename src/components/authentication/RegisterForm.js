@@ -35,37 +35,42 @@ const RegisterForm = ({ user, setUser }) => {
     }
 
     return (
-        <form onSubmit={handleRegister}>
-            <div>
-                name
-                <input
-                    type="text"
-                    value={name}
-                    name="name"
-                    onChange={({ target }) => setName(target.value)}
-                />
-            </div>
-            <div>
-                username
-                <input
-                    type="text"
-                    value={username}
-                    name="username"
-                    onChange={({ target }) => setUsername(target.value)}
-                />
-            </div>
-            <div>
-                password
-                <input
-                    type="password"
-                    value={password}
-                    name="password"
-                    onChange={({ target }) => setPassword(target.value)}
-                />
-            </div>
-            <button type="submit">Sign-up</button>
-            <NavLink to='/login'>Already have an account?</NavLink>
-        </form>
+        <div className='LoginDiv'>
+            <form onSubmit={handleRegister} className='LoginForm'>
+                <h1>
+                    Join us!
+                </h1>
+                <div>
+                    <p>Full name</p>
+                    <input
+                        type="text"
+                        value={name}
+                        name="name"
+                        onChange={({ target }) => setName(target.value)}
+                    />
+                </div>
+                <div>
+                    <p>E-mail</p>
+                    <input
+                        type="text"
+                        value={username}
+                        name="username"
+                        onChange={({ target }) => setUsername(target.value)}
+                    />
+                </div>
+                <div>
+                    <p>Password</p>
+                    <input
+                        type="password"
+                        value={password}
+                        name="password"
+                        onChange={({ target }) => setPassword(target.value)}
+                    />
+                </div>
+                <button type="submit"><p>Sign-up</p></button>
+                <NavLink to='/login'>Already have an account?</NavLink>
+            </form>
+        </div>
     )
 }
 

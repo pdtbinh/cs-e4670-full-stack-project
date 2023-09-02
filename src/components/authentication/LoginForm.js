@@ -30,7 +30,7 @@ const LoginForm = ({ user, setUser }) => {
                     Welcome back!
                 </h1>
                 <div>
-                    <p>Email</p>
+                    <p>E-mail</p>
                     <input
                         type="email"
                         value={username}

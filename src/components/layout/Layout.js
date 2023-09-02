@@ -18,7 +18,7 @@ const Layout = ({ user, setUser, children }) => {
         <div className='Layout'>
             <div className='LayoutPanel'>
                 <h3>
-                    <GroupWorkIcon fontSize='large' style={{ 'margin-right': '5px' }}/>
+                    <GroupWorkIcon fontSize='large' style={{ 'marginRight': '5px' }}/>
                     CollabConnect
                 </h3>
                 {user ?
