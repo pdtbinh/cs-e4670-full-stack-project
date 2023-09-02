@@ -28,6 +28,7 @@ Hour keep of the project (for both backend & frontend):
 |01-09-2023|5|Register new user interface|Frontend|
 |01-09-2023|5|Style layout navbar|Frontend|
 |01-09-2023|5|Style login user form|Frontend|
-|02-09-2023|5|Style layout panel & parametrize CSS values|Frontend|
+|02-09-2023|2|Parametrize CSS values|Frontend|
+|02-09-2023|3|Style layout panel|Frontend|
 
 Total hour spent: <b>130</b>
