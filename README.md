@@ -1,4 +1,4 @@
-# Project intro: Collab-Connect
+# Project intro: CollabConnect
 
 Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? 
 
