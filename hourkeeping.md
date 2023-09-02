@@ -32,5 +32,6 @@ Hour keep of the project (for both backend & frontend):
 |02-09-2023|3|Style layout panel|Frontend|
 |02-09-2023|5|Style register form|Frontend|
 |02-09-2023|5|Learn about responsive design|Frontend|
+|03-09-2023|5|Make list of projects responsive|Frontend|
 
-Total hour spent: <b>140</b>
+Total hour spent: <b>145</b>
