@@ -16,14 +16,11 @@
     border-radius: 50px;
     justify-content: center;
     background-color: var(--cpn-bg-color);
-    box-shadow: 
-        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: var(--cpn-shadow);
 }
 
 .LoginForm input {
-    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-        inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: var(--text-shadow);
     border-radius: 20px;
     border: none;
     padding: 10px;
@@ -40,12 +37,12 @@
 
 .LoginForm p {
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .LoginForm button {
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: var(--button-shadow);
     border-radius: 20px;
     border: none;
     display: flex;
@@ -73,7 +70,7 @@
 
 .LoginForm h1 {
     color: var(--login-bg-color);
-    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: var(--text-shadow);
     background-color: var(--text-bg-color);
     border-radius: 20px;
     border: none;
