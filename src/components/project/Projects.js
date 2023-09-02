@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { getAll } from '../../services/project'
 import AddProjectForm from './AddProjectForm'
 import ProjectCard from './ProjectCard'
+import Grid from '@mui/material/Grid'
+import './Project.css'
 
 const Projects = ({ user }) => {
     const [projects, setProjects] = useState([])
@@ -21,23 +23,35 @@ const Projects = ({ user }) => {
     }, [])
 
     return (
-        <>
+        <div className='Projects'>
             <p>All projects:</p>
-            {projects.map(
-                project => <ProjectCard
-                    key={project.id}
-                    user={user}
-                    project={project}
-                    projects={projects}
-                    setProjects={setProjects}
-                />
-            )}
-            <AddProjectForm
-                user={user}
-                projects={projects}
-                setProjects={setProjects}
-            />
-        </>
+            <Grid
+                container
+                spacing={10}
+                rowSpacing={3}
+                columns={12}
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+            >
+                {projects.map(
+                    project => <ProjectCard
+                        key={project.id}
+                        user={user}
+                        project={project}
+                        projects={projects}
+                        setProjects={setProjects}
+                    />
+                )}
+                <Grid item xs={10} md={5}>
+                    <AddProjectForm
+                        user={user}
+                        projects={projects}
+                        setProjects={setProjects}
+                    />
+                </Grid>
+            </Grid>
+        </div>
     )
 }
 
