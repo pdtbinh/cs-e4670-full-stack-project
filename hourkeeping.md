@@ -31,5 +31,6 @@ Hour keep of the project (for both backend & frontend):
 |02-09-2023|2|Parametrize CSS values|Frontend|
 |02-09-2023|3|Style layout panel|Frontend|
 |02-09-2023|5|Style register form|Frontend|
+|02-09-2023|5|Learn about responsive design|Frontend|
 
-Total hour spent: <b>135</b>
+Total hour spent: <b>140</b>
