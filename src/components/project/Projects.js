@@ -3,7 +3,7 @@ import { getAll } from '../../services/project'
 import AddProjectForm from './AddProjectForm'
 import ProjectCard from './ProjectCard'
 import Grid from '@mui/material/Grid'
-import './Project.css'
+import './style/Project.css'
 
 const Projects = ({ user }) => {
     const [projects, setProjects] = useState([])
@@ -27,8 +27,8 @@ const Projects = ({ user }) => {
             <p>All projects:</p>
             <Grid
                 container
-                spacing={10}
-                rowSpacing={3}
+                spacing={8}
+                rowSpacing={5}
                 columns={12}
                 direction="row"
                 justifyContent="center"

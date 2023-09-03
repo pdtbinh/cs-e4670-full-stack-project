@@ -2,16 +2,18 @@ import { useState } from 'react'
 import { remove } from '../../services/project'
 import EditProjectForm from './EditProjectForm'
 import Grid from '@mui/material/Grid'
-import './Project.css'
+import './style/Project.css'
 
 const ProjectCard = ({ user, project, projects, setProjects }) => {
 
     const [showEditForm, setShowEditForm] = useState(false)
 
     const handleRemoveProject = async () => {
-        const id = project.id
-        await remove(id)
-        setProjects(projects.filter(p => p.id !== id))
+        if (confirm(`Do you want to remove ${project.title}?`)) {
+            const id = project.id
+            await remove(id)
+            setProjects(projects.filter(p => p.id !== id))
+        }
     }
 
     if (showEditForm)
@@ -25,13 +27,17 @@ const ProjectCard = ({ user, project, projects, setProjects }) => {
     return (
         <Grid item xs={10} md={5}>
             <div className='ProjectCard'>
-                <h2>{project.title}</h2>
+                <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 {(user && user.username === project.user.username) ?
-                    <>
-                        <button onClick={() => setShowEditForm(true)}>Edit</button>
-                        <button onClick={handleRemoveProject}>Delete</button>
-                    </>
+                    <div className='ProjectCardButtons'>
+                        <button onClick={() => setShowEditForm(true)}>
+                            <span style={{ 'color': 'white' }}>Edit</span>
+                        </button>
+                        <button onClick={handleRemoveProject}>
+                            <span style={{ 'color': 'white' }}>Remove</span>
+                        </button>
+                    </div>
                     : null
                 }
             </div>

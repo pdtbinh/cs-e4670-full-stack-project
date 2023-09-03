@@ -1,0 +1,100 @@
+.ProjectForm {
+    height: 300px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: var(--cpn-bg-color);
+    box-shadow: var(--cpn-shadow);
+}
+
+.ProjectForm input, .ProjectForm textarea {
+    color: var(--login-bg-color);
+    margin: 0;
+    text-align: center;
+    box-shadow: var(--text-shadow);
+    background-color: var(--text-bg-color);
+    padding: 8px 15px;
+    border-radius: 15px;
+    width: 100%;
+    border: none;
+}
+
+.ProjectForm h3 {
+    overflow: scroll;
+    height: 1.5rem;
+    white-space: nowrap;
+}
+
+.ProjectForm textarea {
+    margin: 15px 0;
+    height: 150px;
+    overflow-y: scroll;
+    text-align: start;
+}
+
+.ProjectForm input:focus, .ProjectForm textarea:focus {
+    outline: none;
+}
+
+.ProjectForm button, .AddProjectButtonDiv button {
+    align-items: center;
+    box-shadow: var(--button-shadow);
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    width: 200px;
+    background-color: var(--login-bg-color);
+    height: fit-content;
+    width: fit-content;
+    padding: 15px 45px;
+    margin-bottom: 40px;
+}
+
+.ProjectForm button:hover, .AddProjectButtonDiv button:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.15s;
+}
+
+.ProjectForm button p, .AddProjectButtonDiv button p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-bg-color);
+}
+
+.ProjectForm > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.ProjectForm > div > button:nth-child(1) {
+    background-color: rgb(38, 122, 38);
+    width: 120px;
+}
+
+.ProjectForm > div > button:nth-child(2) {
+    background-color: rgb(172, 56, 56);
+    width: 120px;
+}
+
+.AddProjectButtonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddProjectButtonDiv button {
+    height: 60px;
+}
+
+.AddProjectButtonDiv button p {
+    font-weight: 600;
+}

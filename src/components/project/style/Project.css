@@ -1,0 +1,87 @@
+.ProjectCard {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column !important;
+    border-radius: 50px;
+    background-color: var(--cpn-bg-color);
+    box-shadow: var(--cpn-shadow);
+    height: 300px;
+}
+
+.ProjectCard h3, .ProjectCard p {
+    color: var(--login-bg-color);
+    margin: 0;
+    text-align: center;
+    box-shadow: var(--text-shadow);
+    background-color: var(--text-bg-color);
+    padding: 8px 15px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.ProjectCard h3 {
+    overflow: scroll;
+    height: 1.5rem;
+    white-space: nowrap;
+}
+
+.ProjectCard p {
+    margin: 15px 0;
+    height: 150px;
+    overflow-y: scroll;
+    text-align: start;
+}
+
+.Projects {
+    width: 100vw;
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+.ProjectCard button {
+    align-items: center;
+    box-shadow: var(--button-shadow);
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    width: 200px;
+    background-color: var(--login-bg-color);
+    height: fit-content;
+    width: fit-content;
+    padding: 15px 45px;
+    margin-bottom: 10px;
+}
+
+.ProjectCard button:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.15s;
+}
+
+.ProjectCard button p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-bg-color);
+}
+
+.ProjectCardButtons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.ProjectCardButtons > button:nth-child(1) {
+    background-color: rgb(38, 122, 38);
+    width: 120px;
+}
+
+.ProjectCardButtons > button:nth-child(2) {
+    background-color: rgb(172, 56, 56);
+    width: 120px;
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { create } from '../../services/project'
+import './style/ProjectForm.css'
 
 const AddProjectForm = ({ user, projects, setProjects }) => {
 
@@ -24,9 +25,9 @@ const AddProjectForm = ({ user, projects, setProjects }) => {
 
     if (!showForm)
         return (
-            <div>
+            <div className='AddProjectButtonDiv'>
                 <button onClick={() => setShowForm(true)}>
-                    Add project
+                    <p>Add more project</p>
                 </button>
             </div>
         )
@@ -34,34 +35,32 @@ const AddProjectForm = ({ user, projects, setProjects }) => {
         return <Navigate to='/login'/>
 
     return (
-        <>
-            <form onSubmit={handleAddProject}>
+        <div>
+            <form onSubmit={handleAddProject} className='ProjectForm'>
+                <input
+                    type="text"
+                    value={title}
+                    name="title"
+                    placeholder='Enter project title...'
+                    onChange={({ target }) => setTitle(target.value)}
+                />
+                <textarea
+                    type="text"
+                    value={description}
+                    name="description"
+                    placeholder='Enter project description...'
+                    onChange={({ target }) => setDescription(target.value)}
+                />
                 <div>
-                    title
-                    <input
-                        type="text"
-                        value={title}
-                        name="title"
-                        onChange={({ target }) => setTitle(target.value)}
-                    />
+                    <button type="submit">
+                        <p>Add</p>
+                    </button>
+                    <button onClick={() => setShowForm(false)}>
+                        <p>Cancel</p>
+                    </button>
                 </div>
-                <div>
-                    description
-                    <input
-                        type="text"
-                        value={description}
-                        name="description"
-                        onChange={({ target }) => setDescription(target.value)}
-                    />
-                </div>
-                <button type="submit">
-                    Add
-                </button>
-                <button onClick={() => setShowForm(false)}>
-                    Cancel
-                </button>
             </form>
-        </>
+        </div>
     )
 }
 

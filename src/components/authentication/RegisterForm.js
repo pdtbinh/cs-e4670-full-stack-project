@@ -4,6 +4,7 @@ import { login } from '../../services/login'
 import { localStorageKey } from '../../keys/keywords'
 import { NavLink, Navigate } from 'react-router-dom'
 import { setToken } from '../../services/project'
+import './style/Auth.css'
 
 const RegisterForm = ({ user, setUser }) => {
     if (user) return <Navigate to='/'/>
