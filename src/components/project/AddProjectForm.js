@@ -38,11 +38,13 @@ const AddProjectForm = ({ user, projects, setProjects }) => {
         <div>
             <form onSubmit={handleAddProject} className='ProjectForm'>
                 <input
+                    style={{ 'fontWeight': 'bold' }}
                     type="text"
                     value={title}
                     name="title"
                     placeholder='Enter project title...'
                     onChange={({ target }) => setTitle(target.value)}
+                    required
                 />
                 <textarea
                     type="text"
@@ -50,6 +52,7 @@ const AddProjectForm = ({ user, projects, setProjects }) => {
                     name="description"
                     placeholder='Enter project description...'
                     onChange={({ target }) => setDescription(target.value)}
+                    required
                 />
                 <div>
                     <button type="submit">

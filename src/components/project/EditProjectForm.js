@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { edit } from '../../services/project'
+import './style/ProjectForm.css'
 
 const EditProjectForm = ({ project, projects, setProjects, setShowForm }) => {
 
@@ -28,10 +29,10 @@ const EditProjectForm = ({ project, projects, setProjects, setShowForm }) => {
     }
 
     return (
-        <form onSubmit={handleEdit}>
+        <form onSubmit={handleEdit} className='ProjectForm'>
             <div>
-                title
                 <input
+                    style={{ 'fontWeight': 'bold' }}
                     type="text"
                     value={title}
                     name="title"
@@ -39,20 +40,21 @@ const EditProjectForm = ({ project, projects, setProjects, setShowForm }) => {
                 />
             </div>
             <div>
-                description
-                <input
+                <textarea
                     type="text"
                     value={description}
                     name="description"
                     onChange={({ target }) => setDescription(target.value)}
                 />
             </div>
-            <button type="submit">
-                Save
-            </button>
-            <button onClick={() => setShowForm(false)}>
-                Cancel
-            </button>
+            <div>
+                <button type="submit">
+                    <p>Save</p>
+                </button>
+                <button onClick={() => setShowForm(false)}>
+                    <p>Cancel</p>
+                </button>
+            </div>
         </form>
     )
 }
