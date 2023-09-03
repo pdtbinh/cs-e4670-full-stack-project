@@ -48,6 +48,7 @@ const RegisterForm = ({ user, setUser }) => {
                         value={name}
                         name="name"
                         onChange={({ target }) => setName(target.value)}
+                        required
                     />
                 </div>
                 <div>
@@ -57,6 +58,7 @@ const RegisterForm = ({ user, setUser }) => {
                         value={username}
                         name="username"
                         onChange={({ target }) => setUsername(target.value)}
+                        required
                     />
                 </div>
                 <div>
@@ -66,6 +68,7 @@ const RegisterForm = ({ user, setUser }) => {
                         value={password}
                         name="password"
                         onChange={({ target }) => setPassword(target.value)}
+                        required
                     />
                 </div>
                 <button type="submit"><p>Sign-up</p></button>
