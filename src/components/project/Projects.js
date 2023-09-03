@@ -24,7 +24,6 @@ const Projects = ({ user }) => {
 
     return (
         <div className='Projects'>
-            <p>All projects:</p>
             <Grid
                 container
                 spacing={8}

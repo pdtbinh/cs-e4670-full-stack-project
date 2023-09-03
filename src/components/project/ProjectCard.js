@@ -17,12 +17,14 @@ const ProjectCard = ({ user, project, projects, setProjects }) => {
     }
 
     if (showEditForm)
-        return <EditProjectForm
-            project={project}
-            projects={projects}
-            setProjects={setProjects}
-            setShowForm={setShowEditForm}
-        />
+        return <Grid item xs={10} md={5}>
+            <EditProjectForm
+                project={project}
+                projects={projects}
+                setProjects={setProjects}
+                setShowForm={setShowEditForm}
+            />
+        </Grid>
 
     return (
         <Grid item xs={10} md={5}>
@@ -38,7 +40,9 @@ const ProjectCard = ({ user, project, projects, setProjects }) => {
                             <span style={{ 'color': 'white' }}>Remove</span>
                         </button>
                     </div>
-                    : null
+                    : <p style={{ 'height': 'fit-content' }}>
+                        Proposed by: {project.user.name} ({project.user.username})
+                    </p>
                 }
             </div>
         </Grid>
