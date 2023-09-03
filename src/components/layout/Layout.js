@@ -18,10 +18,12 @@ const Layout = ({ user, setUser, children }) => {
     return (
         <div className='Layout'>
             <div className='LayoutPanel'>
-                <h3>
-                    <GroupWorkIcon fontSize='large' style={{ 'marginRight': '5px' }}/>
-                    CollabConnect
-                </h3>
+                <NavLink style={{ 'textDecorationLine': 'none' }} to='/'>
+                    <h3>
+                        <GroupWorkIcon fontSize='large' style={{ 'marginRight': '5px' }}/>
+                        CollabConnect
+                    </h3>
+                </NavLink>
                 {user ?
                     <div className='UserInfoBox'>
                         <Tooltip title={`E-mail: ${user.username}`}>
