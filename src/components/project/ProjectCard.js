@@ -41,7 +41,7 @@ const ProjectCard = ({ user, project, projects, setProjects }) => {
                         </button>
                     </div>
                     : <p style={{ 'height': 'fit-content' }}>
-                        Proposed by: {project.user.name} ({project.user.username})
+                        Proposed by: <b>{project.user.name}</b> ({project.user.username})
                     </p>
                 }
             </div>

@@ -54,7 +54,7 @@ const RegisterForm = ({ user, setUser }) => {
                 <div>
                     <p>E-mail</p>
                     <input
-                        type="text"
+                        type="email"
                         value={username}
                         name="username"
                         onChange={({ target }) => setUsername(target.value)}

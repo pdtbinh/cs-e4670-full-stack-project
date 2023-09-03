@@ -32,7 +32,7 @@ const LoginForm = ({ user, setUser }) => {
                 <div>
                     <p>E-mail</p>
                     <input
-                        type="text"
+                        type="email"
                         value={username}
                         name="username"
                         required
