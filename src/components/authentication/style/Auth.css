@@ -1,9 +1,10 @@
 .LoginDiv {
-    height: 100vh;
+    height: fit-content;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 .LoginForm {
