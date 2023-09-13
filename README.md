@@ -1,8 +1,8 @@
 # Project intro: CollabConnect
 
-Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? 
+Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? Or you want to join some project but know nowhere to find?
 
-This full stack web application aims to provide a platform for you to share your project ideas and find the most suitable partners. In short, it helps connect collaborators.
+This full stack MERN web application aims to provide a platform for you to share your project ideas and contacts so that other users, if interested, can reach out and ask to collaborate on the project. That is why it is called CollabConnect.
 
 # Backend host
 
