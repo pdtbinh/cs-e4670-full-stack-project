@@ -1,3 +1,5 @@
+## *** Please note that since I used the free-tier of Fly to deploy, if the backend is idle for too long, it might be suspended (same for MongoDB). Hence, if the grading takes long, you might encounter some errors. In case you encounter any error, let me know so I can reactivate the backend and database.
+
 # Project intro: CollabConnect
 
 Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? Or you want to join some project but know nowhere to find?
