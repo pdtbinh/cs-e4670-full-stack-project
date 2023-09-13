@@ -37,5 +37,7 @@ Hour keep of the project (for both backend & frontend):
 |03-09-2023|5|Style adding project form|Frontend|
 |04-09-2023|5|Style edit project form|Frontend|
 |04-09-2023|5|Improve style and functionalities of project cards|Frontend|
+|12-09-2023|5|Final checks and fixes|Frontend & backend|
+|12-09-2023|5|Deploying the app|Frontend & backend|
 
-Total hour spent: <b>165</b>
+Total hour spent: <b>175</b>
