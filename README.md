@@ -2,6 +2,14 @@
 
 Please find the intro in the `backend` branch.
 
+# Frontend host
+
+Frontend is hosted here:
+
+https://comforting-puppy-923af9.netlify.app
+
+The reason for the irrelevant site name in the link is because I used Netlify to deploy the frontend. For Netlify, the free-tier users do not get to choose the app name in the link. Instead, Netlify generates one link randomly. It did pick a pretty cute name though. :)
+
 # Hour keeping
 
 Link to hour keeping file (frontend and backend combined):
