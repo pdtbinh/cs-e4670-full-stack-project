@@ -35,5 +35,7 @@ Hour keep of the project (for both backend & frontend):
 |03-09-2023|5|Make list of projects responsive|Frontend|
 |03-09-2023|5|Style and improve project card|Frontend|
 |03-09-2023|5|Style adding project form|Frontend|
+|04-09-2023|5|Style edit project form|Frontend|
+|04-09-2023|5|Improve style and functionalities of project cards|Frontend|
 
-Total hour spent: <b>155</b>
+Total hour spent: <b>165</b>
