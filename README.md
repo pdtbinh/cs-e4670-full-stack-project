@@ -4,6 +4,12 @@ Have you ever had an amazing idea for your project, but you have no idea where a
 
 This full stack web application aims to provide a platform for you to share your project ideas and find the most suitable partners. In short, it helps connect collaborators.
 
+# Backend host
+
+Backend host at:
+
+https://collabconnect.fly.dev/
+
 # Hour keeping
 
 Link to hour keeping file (frontend and backend combined):

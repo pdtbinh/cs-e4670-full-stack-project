@@ -43,10 +43,6 @@ ALL API ROUTES
 app.use('/api/projects', middleware.extractUser, projectsRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/auth', authRouter)
-if (process.env.NODE_ENV === 'test') {
-    //const testingRouter = require('./controllers/testing')
-    //app.use('/api/testing', testingRouter)
-}
 app.use('*', (req, res) => res.send('404: Backend route not found.'))
 
 /*=====================
