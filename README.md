@@ -16,6 +16,8 @@ Deployed app (frontend) hosted at:
 
 https://comforting-puppy-923af9.netlify.app
 
+(The reason behind the name in the link is explained in `frontend` README.md)
+
 Backend hosted at:
 
 https://collabconnect.fly.dev/
