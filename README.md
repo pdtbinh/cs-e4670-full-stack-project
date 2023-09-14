@@ -1,5 +1,9 @@
 ## *** Please note that since I used the free-tier of Fly to deploy, if the backend is idle for too long, it might be suspended (same for MongoDB). Hence, if the grading takes long, you might encounter some errors. In case you encounter any error, let me know so I can reactivate the backend and database.
 
+# Project branches
+
+The project repo has 2 repositories: `backend` (default) and `frontend`. The `backend` branch is for the backend code. The `frontend` branch is for the frontend code. The time-tracking document is in the `backend` branch.
+
 # Project intro: CollabConnect
 
 Have you ever had an amazing idea for your project, but you have no idea where and how to find a perfect project partner? Or you want to join some project but know nowhere to find?
