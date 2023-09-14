@@ -8,7 +8,11 @@ This full stack MERN web application aims to provide a platform for you to share
 
 # Backend host
 
-Backend host at:
+Deployed app (frontend) hosted at:
+
+https://comforting-puppy-923af9.netlify.app
+
+Backend hosted at:
 
 https://collabconnect.fly.dev/
 
